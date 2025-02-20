@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+#header {
+    justify-content: space-around;
+}
