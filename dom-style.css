@@ -15,4 +15,13 @@ html, li, a {
 
 #header {
     justify-content: space-around;
+    padding: 2rem 2rem;
+}
+
+#li-item {
+    padding: 0 1rem;
+}
+
+#li-item:last-child {
+    padding-right: 0;
 }
