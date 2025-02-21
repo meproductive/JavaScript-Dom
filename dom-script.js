@@ -30,6 +30,7 @@ for (let i = 0; i < MenuItems.length; i++) {
         const a = document.createElement('a');
         a.id = 'a-item';
         a.innerText = MenuItems[i]; // Assign the current menu item to the a tag
+        a.setAttribute("href","#");
         li.appendChild(a);
     }
 
