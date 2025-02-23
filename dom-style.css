@@ -5,6 +5,7 @@
 }
 
 html, li, a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
     list-style: none;
@@ -12,6 +13,11 @@ html, li, a {
 
 .d-flex {
     display: flex;
+}
+
+.flex-items-center {
+    display: flex;
+    align-items: center;
 }
 
 #header {
@@ -25,4 +31,91 @@ html, li, a {
 
 #li-item:last-child {
     padding-right: 0;
+}
+
+#menu-btn {
+    display: none;
+}
+
+#hamburger-btn {
+    position: relative;
+    width: 30px;
+    height: 0.1875rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#hamburger-btn::after,
+#hamburger-btn::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+}
+
+#hamburger-btn::before {
+    height: 0.1875rem;
+    width: 30px;
+    top: -8px;
+}
+
+#hamburger-btn::after {
+    height: 0.1875rem;
+    width: 30px;
+    bottom: -8px;
+}
+
+@media (max-width: 768px) {
+ 
+    #navigation {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: -70%;
+        height: 100%;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%); 
+        transition: transform 0.3s;
+        -webkit-transition: transform 0.3s;
+        -moz-transition: transform 0.3s;
+        background-color: #f7f7f7;
+    }    
+
+    #navigation.active {
+        left: 0;
+        width: 100%;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+    }
+
+    #navigation ul {
+        display: block;
+        margin: 2rem 2rem 0 2rem;
+    }
+
+    #menu-btn {
+        display: flex;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #menu-btn.active #hamburger-btn {
+        background-color: transparent;
+    }
+
+    #menu-btn.active #hamburger-btn::before {
+        transform: translateY(8px) rotate(-45deg);
+        -webkit-transform: translateY(8px) rotate(-45deg);
+        -moz-transform: translateY(8px) rotate(-45deg);
+    }
+
+    #menu-btn.active #hamburger-btn::after {
+        transform: translateY(-8px) rotate(45deg);
+        -webkit-transform: translateY(-8px) rotate(45deg);
+        -moz-transform: translateY(-8px) rotate(45deg);
+    }
 }

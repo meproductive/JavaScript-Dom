@@ -1,7 +1,7 @@
 // header tag
 const header = document.createElement('header');
 header.id = 'header';
-header.className = 'd-flex';
+header.className = 'flex-items-center';
 document.body.appendChild(header);
 // h1 tag
 const headerOne = document.createElement('h1');
@@ -32,7 +32,22 @@ for (let i = 0; i < MenuItems.length; i++) {
         a.innerText = MenuItems[i]; // Assign the current menu item to the a tag
         a.setAttribute("href","#");
         li.appendChild(a);
-    }
+}
 
+// i tag
+const iBtn = document.createElement('i');
+iBtn.id = 'menu-btn';
+iBtn.className = 'flex-items-center';
+header.appendChild(iBtn);
 
-console.log('hello fucking world!');
+//span tag
+const spanBtn = document.createElement('span');
+spanBtn.id = 'hamburger-btn';
+iBtn.appendChild(spanBtn);
+
+    const hamburgerMenu = () => {
+        navigation.classList.toggle('active');
+        iBtn.classList.toggle('active');
+    };
+
+    menubtn.addEventListener('click', hamburgerMenu);
