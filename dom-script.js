@@ -50,4 +50,4 @@ iBtn.appendChild(spanBtn);
         iBtn.classList.toggle('active');
     };
 
-    menubtn.addEventListener('click', hamburgerMenu);
+    iBtn.addEventListener('click', hamburgerMenu);
