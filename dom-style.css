@@ -107,7 +107,11 @@ header {
 
     #navigation ul {
         display: block;
-        margin: 2rem 2rem 0 2rem;
+        margin: 1.7rem 2rem 0 2rem;
+    }
+
+    #li-item {
+        padding: 1rem 1rem;
     }
 
     #menu-btn {

@@ -45,9 +45,38 @@ const spanBtn = document.createElement('span');
 spanBtn.id = 'hamburger-btn';
 iBtn.appendChild(spanBtn);
 
+    // Hamburger menu open/close function
     const hamburgerMenu = () => {
         navigation.classList.toggle('active');
         iBtn.classList.toggle('active');
     };
-
+    // Hamburger menu button eventlistener
     iBtn.addEventListener('click', hamburgerMenu);
+
+// main tag
+const main = document.createElement('main');
+main.id = 'main';
+document.body.appendChild(main);
+
+// section tag
+const section = document.createElement('section');
+section.id = 'section';
+section.className = 'd-flex'
+document.getElementById('main').appendChild(section);
+
+// article tag
+const article = document.createElement('article');
+article.id = 'article';
+document.getElementById('section').appendChild(article);
+
+// figure tag 
+const figure = document.createElement('figure');
+figure.id = 'figure';
+document.getElementById('section').appendChild(figure);
+
+// img tag
+
+const img = document.createElement('img');
+img.id = 'img';
+img.setAttribute("src", "#");
+document.getElementById('figure').appendChild(img);
